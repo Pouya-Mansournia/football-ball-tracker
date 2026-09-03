@@ -124,7 +124,7 @@ football-ball-tracker/
 ├── docs/
 │   └── preview.jpg
 ├── videos/                # input clips
-├── output/                # annotated output videos (not tracked in git)
+├── output/                # annotated output videos
 └── requirements.txt
 ```
 
@@ -140,16 +140,6 @@ football-ball-tracker/
 - **"Possession" is a nearest-player heuristic**, not a validated
   possession-detection algorithm.
 - Tested only on short (10–45 second) clips; no evaluation on full matches.
-
-## Roadmap
-
-- [x] Ball detection (V1)
-- [x] Kalman-filter ball tracking + false-positive gating (V1.5)
-- [x] Player detection & ID tracking (V2)
-- [ ] Pitch homography (broadcast view → top-down pitch coordinates)
-- [ ] Validated possession estimation
-- [ ] Pass detection
-- [ ] Ball/player heatmaps
 
 ## License
 
