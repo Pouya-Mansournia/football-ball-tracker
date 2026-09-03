@@ -1,0 +1,12 @@
+# ByteTrack tuned for handheld/motion-blurred football footage.
+# Compared to Ultralytics' default bytetrack.yaml, this keeps lost tracks
+# alive longer (track_buffer) and matches boxes more leniently (match_thresh)
+# so a player isn't given a new ID every time they blur or briefly overlap
+# with someone else.
+tracker_type: bytetrack
+track_high_thresh: 0.25   # first-pass association threshold
+track_low_thresh: 0.1     # second-pass association threshold
+new_track_thresh: 0.4     # confidence needed to start a brand-new track
+track_buffer: 60          # frames to keep a lost track alive before dropping it (default: 30)
+match_thresh: 0.9         # IoU matching threshold (default: 0.8) - higher tolerates more motion between frames
+fuse_score: true
